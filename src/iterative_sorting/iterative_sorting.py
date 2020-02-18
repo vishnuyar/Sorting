@@ -22,14 +22,21 @@ def selection_sort( arr ):
     return arr
 
 my_list = [3,6,8,1,9,2,4,7,5]
-print(selection_sort(my_list))
+#print(selection_sort(my_list))
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
-
+    for i in range(len(arr)):
+        j=0
+        while (j < len(arr)-1):
+            if arr[j]>arr[j+1]:
+                temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+            j +=1
     return arr
 
-
+print(bubble_sort(my_list))
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
 
